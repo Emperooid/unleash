@@ -1,8 +1,8 @@
-import { BookOpen } from "lucide-react";
+import Image from "next/image";
+import { BookOpen, Star } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
-import { Book3D } from "@/components/ui/Book3D";
 
 const AVATAR_GRADIENTS = [
   "from-orange-400 to-orange-600",
@@ -70,40 +70,33 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={0.2} className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-orange-600/25 via-ink to-ink shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)]">
+        <Reveal delay={0.2} className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:mx-0 lg:ml-auto lg:max-w-md">
+          <div className="relative aspect-[3/4] w-full">
             <div
-              className="absolute inset-0 opacity-70"
-              style={{
-                backgroundImage:
-                  "radial-gradient(circle at 50% 38%, rgba(243,144,31,0.35), transparent 55%)",
-              }}
-              aria-hidden
-            />
-            <div
-              className="absolute inset-0 opacity-[0.15]"
-              style={{
-                backgroundImage:
-                  "radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px)",
-                backgroundSize: "22px 22px",
-              }}
+              className="absolute -inset-10 rounded-[3rem] bg-orange-500/25 blur-[90px]"
               aria-hidden
             />
 
-            <span className="absolute left-6 top-6 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-orange-200 backdrop-blur-sm">
+            <div className="group relative h-full w-full -rotate-2 overflow-hidden rounded-2xl shadow-[0_50px_100px_-25px_rgba(0,0,0,0.7)] ring-1 ring-white/10 transition-transform duration-500 ease-out hover:rotate-0">
+              <Image
+                src="/book/front.jpg"
+                alt="UNLEASH book cover — The Blueprint for a Life that Attracts Uncommon Opportunities"
+                fill
+                priority
+                sizes="(min-width: 1024px) 420px, (min-width: 640px) 340px, 260px"
+                className="object-cover"
+              />
+            </div>
+
+            <span className="absolute -top-4 left-6 inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink shadow-lg">
+              <Star size={12} className="fill-orange-500 text-orange-500" />
               Bestseller
             </span>
 
-            <div className="absolute inset-0 flex items-center justify-center p-10 sm:p-14">
-              <Book3D size="lg" speed={16} />
-            </div>
-
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent px-7 pb-6 pt-14">
-              <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-white">
-                UNLEASH
-              </p>
-              <p className="mt-1 text-xs text-white/60">
-                By Topsy Kola-Oyeneyin — Get your copy today
+            <div className="absolute -bottom-6 -left-6 hidden max-w-[220px] rounded-2xl bg-white p-4 shadow-2xl sm:block">
+              <p className="text-xs font-semibold text-ink">UNLEASH</p>
+              <p className="mt-0.5 text-[11px] leading-relaxed text-ink/55">
+                By Topsy Kola-Oyeneyin — get your copy today
               </p>
             </div>
           </div>
