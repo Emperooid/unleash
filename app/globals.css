@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #0b0c0f;
+  --color-ink-soft: #14161b;
+  --color-cream: #faf6ee;
+  --color-paper: #fffdf9;
+
+  --color-orange-50: #fdf1e7;
+  --color-orange-200: #f6c99a;
+  --color-orange-300: #f2ac5c;
+  --color-orange-400: #f3901f;
+  --color-orange-500: #e8710f;
+  --color-orange-600: #cf5a0a;
+  --color-orange-700: #a8450a;
+  --color-orange-800: #7c3208;
+
+  --color-line: rgba(11, 12, 15, 0.1);
+  --color-line-dark: rgba(255, 255, 255, 0.12);
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-cream: var(--color-cream);
+  --color-paper: var(--color-paper);
+
+  --color-orange-50: var(--color-orange-50);
+  --color-orange-200: var(--color-orange-200);
+  --color-orange-300: var(--color-orange-300);
+  --color-orange-400: var(--color-orange-400);
+  --color-orange-500: var(--color-orange-500);
+  --color-orange-600: var(--color-orange-600);
+  --color-orange-700: var(--color-orange-700);
+  --color-orange-800: var(--color-orange-800);
+
+  --font-display: var(--font-bricolage);
+  --font-body: var(--font-inter);
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--color-orange-400);
+  color: var(--color-ink);
+}
+
+/* Reveal-on-scroll primitive, driven by IntersectionObserver toggling data-visible */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+[data-reveal][data-visible="true"] {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: var(--animate-marquee);
+}
+
+@keyframes book-spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-book-spin {
+  animation: book-spin var(--book-speed, 14s) linear infinite;
+}
+
+/* Lenis smooth scroll helper classes */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-book-spin {
+    animation: none !important;
+  }
+}
