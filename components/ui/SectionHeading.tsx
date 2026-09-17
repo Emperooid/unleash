@@ -27,17 +27,18 @@ export function SectionHeading({
       {eyebrow && (
         <span
           className={cn(
-            "mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em]",
-            tone === "dark" ? "text-orange-500" : "text-orange-300"
+            "mb-4 inline-flex items-center rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em]",
+            tone === "dark"
+              ? "bg-orange-100 text-orange-600"
+              : "bg-white/10 text-orange-300"
           )}
         >
-          <span className="h-px w-6 bg-current" />
           {eyebrow}
         </span>
       )}
       <h2
         className={cn(
-          "font-display text-3xl font-semibold leading-[1.1] tracking-tight sm:text-4xl lg:text-[2.75rem]",
+          "font-display text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-[2.75rem]",
           tone === "dark" ? "text-ink" : "text-white"
         )}
       >

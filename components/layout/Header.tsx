@@ -5,7 +5,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/cn";
-import { NAV_LINKS, PRINCIPLES } from "@/lib/content";
+import { NAV_LINKS, VALUE_CARDS } from "@/lib/content";
 import { Marquee } from "@/components/ui/Marquee";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -32,7 +32,7 @@ export function Header() {
   return (
     <div className="sticky top-0 z-50">
       <div className="border-b border-ink/10 bg-ink text-orange-200">
-        <Marquee items={PRINCIPLES} />
+        <Marquee items={VALUE_CARDS.map((c) => c.word)} />
       </div>
 
       <header
@@ -49,12 +49,12 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:flex">
+          <nav className="hidden items-center gap-1 rounded-full border border-ink/10 bg-white/60 p-1 lg:flex">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-ink/70 transition-colors hover:text-ink"
+                className="rounded-full px-4 py-2 text-sm font-semibold text-ink/70 transition-colors hover:bg-orange-50 hover:text-orange-600"
               >
                 {link.label}
               </Link>

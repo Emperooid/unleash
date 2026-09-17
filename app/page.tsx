@@ -1,23 +1,23 @@
 import { Hero } from "@/components/sections/Hero";
-import { WhatIsUnleash } from "@/components/sections/WhatIsUnleash";
-import { BookPromo } from "@/components/sections/BookPromo";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { ReadersProgramme } from "@/components/sections/ReadersProgramme";
-import { BookLaunchVideo } from "@/components/sections/BookLaunchVideo";
-import { ChallengeYourself } from "@/components/sections/ChallengeYourself";
-import { UnleashConnect } from "@/components/sections/UnleashConnect";
+import { UnleashStory } from "@/components/sections/UnleashStory";
+import { CardScrollShowcase } from "@/components/sections/CardScrollShowcase";
+import { HubExpressions } from "@/components/sections/HubExpressions";
+import { ShopUnleash } from "@/components/sections/ShopUnleash";
+import { Initiatives } from "@/components/sections/Initiatives";
+import { QuickLinks } from "@/components/sections/QuickLinks";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <WhatIsUnleash />
-      <BookPromo />
-      <Testimonials />
-      <ReadersProgramme />
-      <BookLaunchVideo />
-      <ChallengeYourself />
-      <UnleashConnect />
+      <UnleashStory />
+      <div id="principles">
+        <CardScrollShowcase />
+      </div>
+      <HubExpressions />
+      <ShopUnleash />
+      <Initiatives />
+      <QuickLinks />
     </>
   );
 }

@@ -17,6 +17,20 @@
 
   --color-line: rgba(11, 12, 15, 0.1);
   --color-line-dark: rgba(255, 255, 255, 0.12);
+
+  /* Card accent colors — one per value/principle card */
+  --color-card-blue: #1786fa;
+  --color-card-blue-ink: #0b3d7a;
+  --color-card-green: #1fa060;
+  --color-card-green-ink: #0d4a2c;
+  --color-card-purple: #7c5cfc;
+  --color-card-purple-ink: #3a2a8a;
+  --color-card-pink: #ff5d8f;
+  --color-card-pink-ink: #8a1f45;
+  --color-card-teal: #12b3a8;
+  --color-card-teal-ink: #0a5852;
+  --color-card-yellow: #ffb703;
+  --color-card-yellow-ink: #7a5400;
 }
 
 @theme inline {
@@ -34,8 +48,21 @@
   --color-orange-700: var(--color-orange-700);
   --color-orange-800: var(--color-orange-800);
 
-  --font-display: var(--font-bricolage);
-  --font-body: var(--font-inter);
+  --color-card-blue: var(--color-card-blue);
+  --color-card-blue-ink: var(--color-card-blue-ink);
+  --color-card-green: var(--color-card-green);
+  --color-card-green-ink: var(--color-card-green-ink);
+  --color-card-purple: var(--color-card-purple);
+  --color-card-purple-ink: var(--color-card-purple-ink);
+  --color-card-pink: var(--color-card-pink);
+  --color-card-pink-ink: var(--color-card-pink-ink);
+  --color-card-teal: var(--color-card-teal);
+  --color-card-teal-ink: var(--color-card-teal-ink);
+  --color-card-yellow: var(--color-card-yellow);
+  --color-card-yellow-ink: var(--color-card-yellow-ink);
+
+  --font-display: var(--font-baloo);
+  --font-body: var(--font-nunito);
 
   --animate-marquee: marquee 32s linear infinite;
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
