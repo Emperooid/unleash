@@ -33,11 +33,7 @@ export function ShopUnleash() {
               >
                 Shop now
               </Button>
-              <Button
-                href="/join"
-                size="lg"
-                className="!bg-[#1FA060] hover:!bg-[#188a51]"
-              >
+              <Button href="/join" size="lg">
                 Join the hub
               </Button>
             </div>

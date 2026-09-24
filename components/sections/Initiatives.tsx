@@ -29,11 +29,7 @@ export function Initiatives() {
             className="object-cover"
           />
           <div className="absolute inset-x-0 bottom-8 flex justify-center sm:bottom-12">
-            <Button
-              href="/initiatives"
-              size="lg"
-              className="!bg-[#1FA060] hover:!bg-[#188a51]"
-            >
+            <Button href="/initiatives" size="lg">
               Learn more
             </Button>
           </div>

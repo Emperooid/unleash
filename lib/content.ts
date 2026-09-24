@@ -242,8 +242,8 @@ export const FOOTER_COLUMNS = [
     title: "Company",
     links: [
       { label: "About Us", href: "/about" },
+      { label: "The Book", href: "/book" },
       { label: "Principles", href: "/#principles" },
-      { label: "Chief Champ", href: "#" },
       { label: "Contact Us", href: "/connect" },
     ],
   },
@@ -258,18 +258,18 @@ export const FOOTER_COLUMNS = [
   {
     title: "Resources",
     links: [
-      { label: "Vision Planner", href: "#" },
-      { label: "Newsletter", href: "#" },
-      { label: "Case Studies", href: "#" },
-      { label: "Reports", href: "#" },
-      { label: "Digest", href: "#" },
+      { label: "Readers Programme", href: "/readers-programme" },
+      { label: "Initiatives", href: "/initiatives" },
+      { label: "Blog", href: "/blog" },
+      { label: "Newsletter", href: "/connect#newsletter" },
+      { label: "Shop", href: "/shop" },
     ],
   },
 ];
 
 export const SOCIAL_LINKS = [
-  { label: "LinkedIn", href: "#" },
-  { label: "Twitter", href: "#" },
-  { label: "TikTok", href: "#" },
-  { label: "Instagram", href: "https://www.instagram.com/theunleashhub/" },
+  { label: "Instagram", href: "https://www.instagram.com/theunleashhub" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/theunleashhub" },
+  { label: "X", href: "https://x.com/theunleashhub" },
+  { label: "TikTok", href: "https://www.tiktok.com/@theunleashhub" },
 ];

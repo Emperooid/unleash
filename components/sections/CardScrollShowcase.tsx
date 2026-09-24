@@ -97,26 +97,31 @@ function MobilePrincipleList() {
               <motion.div key={card.slug} variants={staggerItem}>
                 <Link
                   href={`/values/${card.slug}`}
-                  className={`flex min-h-[44px] items-start gap-4 rounded-3xl p-6 shadow-[0_16px_32px_-20px_rgba(0,0,0,0.5)] ring-1 ring-white/10 transition-transform active:scale-[0.98] ${shade}`}
+                  className={`flex min-h-[44px] flex-col gap-4 rounded-3xl p-6 shadow-[0_16px_32px_-20px_rgba(0,0,0,0.5)] ring-1 ring-white/10 transition-transform active:scale-[0.98] ${shade}`}
                 >
-                  <PlusBadge size={38} />
-                  <div className="min-w-0 flex-1">
-                    <p className="font-display text-2xl font-bold leading-none text-white">
-                      {card.word}
-                    </p>
-                    <p className="mt-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-white/70">
-                      {card.phonetic}
-                    </p>
-                    <p className="mt-2.5 text-sm leading-relaxed text-white/85">
-                      {card.tagline}
-                    </p>
+                  <div className="flex items-start gap-4">
+                    <PlusBadge size={38} />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-display text-2xl font-bold leading-none text-white">
+                        {card.word}
+                      </p>
+                      <p className="mt-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-white/70">
+                        {card.phonetic}
+                      </p>
+                      <p className="mt-2.5 text-sm leading-relaxed text-white/85">
+                        {card.tagline}
+                      </p>
+                    </div>
+                    <span
+                      aria-hidden
+                      className="mt-1 shrink-0 text-lg text-white/60"
+                    >
+                      →
+                    </span>
                   </div>
-                  <span
-                    aria-hidden
-                    className="mt-1 shrink-0 text-lg text-white/60"
-                  >
-                    →
-                  </span>
+                  <p className="text-sm leading-relaxed text-white/70 line-clamp-2">
+                    {card.definition[0]}
+                  </p>
                 </Link>
               </motion.div>
             );
@@ -189,6 +194,7 @@ function AccordionCard({
   activeIndex: MotionValue<number>;
 }) {
   const shade = ORANGE_SHADES[index % ORANGE_SHADES.length];
+  const number = String(index + 1).padStart(2, "0");
 
   // 1 when this card is the active one, easing to 0 within one card-width.
   const closeness = useTransform(activeIndex, (v) =>
@@ -213,11 +219,14 @@ function AccordionCard({
       <motion.div style={{ opacity: collapsedOpacity }} className="absolute inset-0">
         <Link
           href={`/values/${card.slug}`}
-          className="flex h-full w-full flex-col items-center justify-between py-12"
+          className="flex h-full w-full flex-col items-center py-12"
         >
           <PlusBadge size={44} rotate={badgeRotate} />
+          <span className="mt-3 text-xs font-bold tracking-[0.2em] text-white/50">
+            {number}
+          </span>
           <span
-            className="mb-1 whitespace-nowrap text-base font-bold uppercase tracking-[0.16em] text-white/85 [writing-mode:vertical-rl]"
+            className="mb-1 mt-auto whitespace-nowrap text-base font-bold uppercase tracking-[0.16em] text-white/85 [writing-mode:vertical-rl]"
             style={{ transform: "rotate(180deg)" }}
           >
             {card.word}
@@ -225,7 +234,7 @@ function AccordionCard({
         </Link>
       </motion.div>
 
-      {/* Expanded: title, phonetic, tagline — also clickable, same link */}
+      {/* Expanded: number, title, phonetic, tagline, excerpt — also clickable */}
       <motion.div
         style={{ opacity: expandedOpacity, pointerEvents: expandedPointerEvents }}
         className="absolute inset-0"
@@ -234,7 +243,12 @@ function AccordionCard({
           href={`/values/${card.slug}`}
           className="flex h-full w-full min-w-[420px] flex-col p-11 xl:p-12"
         >
-          <PlusBadge size={44} rotate={badgeRotate} />
+          <div className="flex w-full items-start justify-between">
+            <PlusBadge size={44} rotate={badgeRotate} />
+            <span className="text-sm font-bold tracking-[0.2em] text-white/50">
+              {number} / {CARDS.length}
+            </span>
+          </div>
           <p className="mt-7 font-display text-6xl font-bold leading-none text-white xl:text-7xl">
             {card.word}
           </p>
@@ -243,6 +257,9 @@ function AccordionCard({
           </p>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-white/85 xl:text-xl">
             {card.tagline}
+          </p>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60 line-clamp-3">
+            {card.definition[0]}
           </p>
           <span className="mt-auto inline-flex w-fit items-center gap-1.5 rounded-full bg-white/15 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/25">
             Read the definition →

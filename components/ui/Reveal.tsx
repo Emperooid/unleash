@@ -10,12 +10,22 @@ export function Reveal({
   delay = 0,
   className,
   y = 24,
+  variants,
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
   y?: number;
+  variants?: Variants;
 }) {
+  if (variants) {
+    return (
+      <motion.div variants={variants} className={className}>
+        {children}
+      </motion.div>
+    );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y }}
