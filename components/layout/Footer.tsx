@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
+import { NewsletterForm } from "@/components/ui/NewsletterForm";
 import { Reveal } from "@/components/ui/Reveal";
 import {
   InstagramBrandIcon,
@@ -11,9 +11,9 @@ import {
 } from "@/components/ui/SocialIcons";
 import { FOOTER_COLUMNS, SOCIAL_LINKS } from "@/lib/content";
 
-const SOCIAL_ICONS = {
+const SOCIAL_ICONS: Record<string, (p: { size?: number }) => React.ReactElement> = {
   LinkedIn: LinkedInBrandIcon,
-  Twitter: XBrandIcon,
+  X: XBrandIcon,
   TikTok: TikTokBrandIcon,
   Instagram: InstagramBrandIcon,
 };
@@ -33,17 +33,7 @@ export function Footer() {
                 Join thousands of young people living intentionally.
               </p>
             </div>
-            <form className="flex w-full max-w-md flex-col gap-3 sm:flex-row">
-              <input
-                type="email"
-                required
-                placeholder="Enter your email"
-                className="w-full flex-1 rounded-full border border-white/15 bg-white/5 px-5 py-3.5 text-sm text-white placeholder:text-white/40 outline-none transition-colors focus:border-orange-400"
-              />
-              <Button type="submit" size="md" className="shrink-0">
-                Subscribe
-              </Button>
-            </form>
+            <NewsletterForm variant="dark" className="max-w-md" />
           </Reveal>
         </Container>
       </div>
@@ -115,10 +105,10 @@ export function Footer() {
       <div className="bg-ink text-white/60">
         <Container className="flex flex-col items-center justify-between gap-4 py-6 text-sm sm:flex-row">
           <div className="flex items-center gap-6">
-            <Link href="#" className="transition-colors hover:text-white">
+            <Link href="/terms" className="transition-colors hover:text-white">
               Terms &amp; Support
             </Link>
-            <Link href="#" className="transition-colors hover:text-white">
+            <Link href="/privacy" className="transition-colors hover:text-white">
               Privacy Policy
             </Link>
           </div>

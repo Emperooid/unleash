@@ -30,7 +30,7 @@ export function UnleashStory() {
                 Curious to know how this journey started?
               </p>
               <Button
-                href="https://www.youtube.com"
+                href="https://www.youtube.com/@tkoinsights"
                 size="md"
                 className="mt-6"
                 icon={<Play size={16} fill="currentColor" />}
@@ -59,11 +59,7 @@ export function UnleashStory() {
             </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
-              <Button
-                href="/shop"
-                size="md"
-                className="!bg-[#1FA060] hover:!bg-[#188a51]"
-              >
+              <Button href="/shop" size="md">
                 Get the book
               </Button>
 
@@ -111,7 +107,7 @@ export function UnleashStory() {
             </div>
 
             <Button
-              href="#"
+              href="https://www.amazon.com/Unleash-Blueprint-Attracts-Uncommon-Opportunities/dp/9787828066"
               size="md"
               className="mt-8 w-fit"
               icon={<Star size={16} fill="currentColor" />}

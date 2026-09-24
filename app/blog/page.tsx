@@ -1,16 +1,35 @@
 import type { Metadata } from "next";
-import { ComingSoon } from "@/components/ui/ComingSoon";
+import { Container } from "@/components/ui/Container";
+import { PageHero } from "@/components/ui/PageHero";
+import { BlogList } from "@/components/BlogList";
+import { BLOG_POSTS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Blog — UNLEASH Hub",
-  description: "The UNLEASH Hub blog — coming soon.",
+  description:
+    "Articles and reflections on living out the twelve UNLEASH principles — mindset, growth, and opportunity.",
 };
 
 export default function BlogPage() {
+  const posts = [...BLOG_POSTS].sort((a, b) =>
+    b.date.localeCompare(a.date)
+  );
+
   return (
-    <ComingSoon
-      title="Blog"
-      blurb="Articles and reflections on living out the principles — first posts coming soon."
-    />
+    <>
+      <PageHero
+        tone="ink"
+        eyebrow="Blog"
+        title="Reflections on living unleashed."
+        description="Short, practical reads on the principles, the mindset, and the opportunities that come to those who pursue them."
+        crumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]}
+      />
+
+      <section className="bg-cream py-16 sm:py-24">
+        <Container>
+          <BlogList posts={posts} />
+        </Container>
+      </section>
+    </>
   );
 }
