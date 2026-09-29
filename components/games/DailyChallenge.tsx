@@ -23,9 +23,9 @@ const CHALLENGES: Challenge[] = [
       "Learn one new thing and apply it the same day. Turn information into understanding.",
   },
   {
-    principle: "Discipline",
+    principle: "Planning",
     action:
-      "Do the one thing you\u2019ve been avoiding \u2014 no negotiating with the feeling, just do it.",
+      "Write down the next three steps for an important task, then complete the first one.",
   },
   {
     principle: "Compassion",
@@ -38,34 +38,34 @@ const CHALLENGES: Challenge[] = [
       "Keep a small commitment nobody is watching. Your word to yourself counts.",
   },
   {
-    principle: "Integrity",
+    principle: "Honor",
     action:
-      "Close the gap between what you say and what you do today \u2014 even in one small area.",
+      "Choose the dignified and respectful response in one difficult situation today.",
   },
   {
-    principle: "Self-Control",
+    principle: "Teachability",
     action:
-      "Pause before reacting once today. Respond on purpose, not on impulse.",
+      "Ask for one piece of feedback and put it into practice before the day ends.",
   },
   {
-    principle: "Courage",
+    principle: "Quality Relationships",
     action:
-      "Do one thing that scares you a little \u2014 send the message, make the ask, take the step.",
+      "Give someone your full attention and make one meaningful investment in the relationship.",
   },
   {
-    principle: "Gratitude",
+    principle: "Prudence",
     action:
-      "Write down three things you\u2019ve been given that you\u2019ve been overlooking, and thank someone.",
+      "Before making one decision, pause to consider its likely consequences.",
   },
   {
-    principle: "Patience",
+    principle: "Intentionality of Speech",
     action:
-      "Stick with a long-term goal for one more deliberate step today, without checking for quick results.",
+      "Speak one difficult truth with clarity, kindness, and purpose.",
   },
   {
-    principle: "Vision",
+    principle: "Discipline & Self-Control",
     action:
-      "Spend ten minutes writing a clear picture of who you want to become in five years.",
+      "Do the important thing you have been avoiding without negotiating with the feeling.",
   },
 ];
 

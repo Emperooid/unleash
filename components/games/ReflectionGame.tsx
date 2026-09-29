@@ -5,28 +5,28 @@ import { Shuffle, Sparkles } from "lucide-react";
 
 const PROMPTS = [
   {
-    principle: "Vision",
-    text: "Describe, in concrete detail, the person you intend to be in five years. What are you doing, with whom, and contributing what?",
+    principle: "Planning",
+    text: "What important outcome are you working toward? Write the next three steps that will move you there.",
   },
   {
     principle: "Diligence",
     text: "Where are you currently \u201cdoing your bit\u201d instead of doing whatever it takes for the outcome? What would the outcome-focused version of you do differently?",
   },
   {
-    principle: "Courage",
-    text: "What is one thing you\u2019ve been afraid to do that you know, deep down, is the right next step? What is that fear actually protecting you from?",
+    principle: "Compassion",
+    text: "Who around you is carrying something heavy right now? What is one practical way you could lighten it?",
   },
   {
-    principle: "Integrity",
-    text: "Where is there a gap between what you say and what you do? Pick the smallest one and write out how you\u2019ll close it this week.",
+    principle: "Honor",
+    text: "What would the most dignified and respectful response be in a difficult situation you are facing?",
   },
   {
-    principle: "Gratitude",
-    text: "List three things you\u2019ve been given that you\u2019ve stopped noticing. How does noticing them change how you show up today?",
+    principle: "Teachability",
+    text: "What feedback have you been avoiding? What could you learn if you received it openly?",
   },
   {
-    principle: "Patience",
-    text: "What are you tempted to rush? What is one reason the waiting might actually be working for you?",
+    principle: "Quality Relationships",
+    text: "Which relationship deserves more of your attention? What meaningful investment can you make this week?",
   },
   {
     principle: "Knowledge",
@@ -37,20 +37,20 @@ const PROMPTS = [
     text: "Where have you seen unfairness recently and said nothing? What would it have cost you to speak up \u2014 and what did silence cost?",
   },
   {
-    principle: "Self-Control",
-    text: "Where are you reacting instead of responding? What is the pause that would change the outcome?",
+    principle: "Prudence",
+    text: "What decision deserves more careful thought? What consequences should you consider before acting?",
   },
   {
     principle: "Trustworthiness",
     text: "What small commitment to yourself have you broken recently? What would it take to keep it for the next seven days?",
   },
   {
-    principle: "Compassion",
-    text: "Who around you is carrying something heavy right now? What is one practical way you could lighten it?",
+    principle: "Intentionality of Speech",
+    text: "What do you need to say? How can you communicate it truthfully, clearly, and with care?",
   },
   {
-    principle: "Discipline",
-    text: "What is the unglamorous repetition you\u2019ve been avoiding? What becomes possible if you simply don\u2019t miss it for a month?",
+    principle: "Discipline & Self-Control",
+    text: "What important action are you avoiding? What would change if you chose purpose over the feeling of the moment?",
   },
 ];
 

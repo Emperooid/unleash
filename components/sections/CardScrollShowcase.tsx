@@ -44,21 +44,20 @@ const ORANGE_SHADES = [
   "bg-orange-500",
 ];
 
-// Order for this showcase specifically — starts Justice, then Knowledge,
-// independent of VALUE_CARDS' own (Diligence-first) order.
+// Keep the accordion order aligned with the official UNLEASH principles.
 const SHOWCASE_ORDER = [
   "justice",
   "knowledge",
+  "planning",
   "diligence",
-  "discipline",
   "compassion",
+  "honor",
+  "teachability",
   "trustworthiness",
-  "integrity",
-  "self-control",
-  "courage",
-  "gratitude",
-  "patience",
-  "vision",
+  "quality-relationships",
+  "prudence",
+  "intentionality-of-speech",
+  "discipline-self-control",
 ];
 
 const CARDS = SHOWCASE_ORDER.map((slug) =>
@@ -119,8 +118,8 @@ function MobilePrincipleList() {
                       →
                     </span>
                   </div>
-                  <p className="text-sm leading-relaxed text-white/70 line-clamp-2">
-                    {card.definition[0]}
+                  <p className="text-sm leading-relaxed text-white/70">
+                    {card.definition.join(" ")}
                   </p>
                 </Link>
               </motion.div>
@@ -258,8 +257,8 @@ function AccordionCard({
           <p className="mt-5 max-w-md text-lg leading-relaxed text-white/85 xl:text-xl">
             {card.tagline}
           </p>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60 line-clamp-3">
-            {card.definition[0]}
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60">
+            {card.definition.join(" ")}
           </p>
           <span className="mt-auto inline-flex w-fit items-center gap-1.5 rounded-full bg-white/15 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/25">
             Read the definition →

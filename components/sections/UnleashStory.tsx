@@ -58,12 +58,12 @@ export function UnleashStory() {
               </blockquote>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-4">
+            <div className="mt-6 flex w-full flex-wrap items-center justify-between gap-5">
               <Button href="/shop" size="md">
                 Get the book
               </Button>
 
-              <div className="flex items-center gap-4">
+              <div className="flex min-w-0 items-center gap-4">
                 <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-white shadow-md sm:h-20 sm:w-20">
                   <Image
                     src="/testimonials/shola-akinlade.png"
@@ -73,11 +73,13 @@ export function UnleashStory() {
                     className="object-cover"
                   />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-base font-bold text-ink sm:text-lg">
                     {BOOK_TESTIMONIAL.name}
                   </p>
-                  <p className="text-xs text-ink/55 sm:text-sm">{BOOK_TESTIMONIAL.title}</p>
+                  <p className="text-xs text-ink/55 sm:text-sm">
+                    {BOOK_TESTIMONIAL.title}
+                  </p>
                 </div>
               </div>
             </div>
@@ -85,7 +87,7 @@ export function UnleashStory() {
             <p className="mt-8 text-sm italic text-ink/50">
               &hellip;also available on
             </p>
-            <div className="mt-5 flex flex-wrap items-center gap-x-9 gap-y-6 sm:gap-x-10">
+            <div className="mt-5 grid w-full grid-cols-2 items-center gap-x-4 gap-y-7 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-5 lg:gap-x-3">
               {BOOK_VENDORS.map((vendor) => (
                 <a
                   key={vendor.name}
@@ -93,14 +95,14 @@ export function UnleashStory() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={vendor.name}
-                  className="shrink-0 transition-transform duration-200 hover:scale-110"
+                  className="flex min-w-0 items-center justify-center transition-transform duration-200 hover:scale-110"
                 >
                   <Image
                     src={vendor.logo}
                     alt={vendor.name}
                     width={vendor.logoWidth}
                     height={vendor.logoHeight}
-                    className="h-11 w-auto object-contain sm:h-14"
+                    className="h-10 w-full max-w-[130px] object-contain sm:h-14"
                   />
                 </a>
               ))}

@@ -13,46 +13,46 @@ type Question = {
 const QUESTIONS: Question[] = [
   {
     prompt: "Which principle means \u201csteady, earnest, and energetic effort\u201d?",
-    options: ["Diligence", "Patience", "Courage", "Vision"],
+    options: ["Diligence", "Planning", "Prudence", "Honor"],
     answer: 0,
   },
   {
     prompt:
-      "Which principle is \u201cthe alignment between what you believe, what you say, and what you do\u201d?",
-    options: ["Justice", "Integrity", "Compassion", "Self-Control"],
-    answer: 1,
+      "Which principle means \u201cgiving every person what they are rightly due\u201d?",
+    options: ["Justice", "Knowledge", "Compassion", "Honor"],
+    answer: 0,
   },
   {
     prompt:
-      "Which principle is called \u201cthe bridge between goals and accomplishment\u201d?",
-    options: ["Discipline", "Knowledge", "Gratitude", "Trustworthiness"],
+      "Which principle is the deliberate process of deciding what needs to happen and when?",
+    options: ["Planning", "Diligence", "Teachability", "Prudence"],
     answer: 0,
   },
   {
     prompt:
       "Which principle is \u201ca deep awareness of another\u2019s suffering, paired with the wish to relieve it\u201d?",
-    options: ["Courage", "Compassion", "Justice", "Vision"],
-    answer: 1,
-  },
-  {
-    prompt: "Which principle means \u201cgiving every person what they are rightly due\u201d?",
-    options: ["Knowledge", "Diligence", "Justice", "Patience"],
-    answer: 2,
-  },
-  {
-    prompt: "Which principle is \u201cthe capacity to endure delay without giving up\u201d?",
-    options: ["Patience", "Discipline", "Self-Control", "Gratitude"],
+    options: ["Compassion", "Justice", "Trustworthiness", "Honor"],
     answer: 0,
   },
   {
-    prompt: "Which principle is \u201ca vivid mental image of what could be\u201d?",
-    options: ["Vision", "Courage", "Knowledge", "Integrity"],
+    prompt: "Which principle is the humility and willingness to keep learning?",
+    options: ["Teachability", "Knowledge", "Planning", "Diligence"],
     answer: 0,
   },
   {
-    prompt: "Which principle is \u201creadiness to notice and return kindness\u201d?",
-    options: ["Compassion", "Gratitude", "Trustworthiness", "Justice"],
-    answer: 1,
+    prompt: "Which principle means being dependable, honest, and worthy of confidence?",
+    options: ["Trustworthiness", "Honor", "Quality Relationships", "Justice"],
+    answer: 0,
+  },
+  {
+    prompt: "Which principle uses good judgment to make wise decisions?",
+    options: ["Prudence", "Planning", "Knowledge", "Diligence"],
+    answer: 0,
+  },
+  {
+    prompt: "Which principle asks us to use words thoughtfully, truthfully, and purposefully?",
+    options: ["Intentionality of Speech", "Honor", "Quality Relationships", "Teachability"],
+    answer: 0,
   },
 ];
 
