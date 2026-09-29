@@ -7,12 +7,16 @@ import { cn } from "@/lib/cn";
 type Entry = { word: string; hint: string };
 
 const WORDS: Entry[] = [
-  { word: "Diligence", hint: "Steady, earnest, energetic effort." },
   { word: "Justice", hint: "Giving every person what they are rightly due." },
-  { word: "Vision", hint: "A vivid mental image of what could be." },
-  { word: "Discipline", hint: "The bridge between goals and accomplishment." },
-  { word: "Integrity", hint: "Wholeness between what you believe, say, and do." },
-  { word: "Courage", hint: "Strength in the face of pain, fear, or grief." },
+  { word: "Knowledge", hint: "Understanding gained through learning and experience." },
+  { word: "Planning", hint: "Preparing deliberately for the work ahead." },
+  { word: "Diligence", hint: "Steady, earnest, energetic effort." },
+  { word: "Compassion", hint: "Awareness of suffering paired with a wish to relieve it." },
+  { word: "Honor", hint: "Living with dignity, integrity, and respect." },
+  { word: "Teachability", hint: "The humility and willingness to keep learning." },
+  { word: "Trustworthiness", hint: "Being dependable, honest, and worthy of confidence." },
+  { word: "Prudence", hint: "Using good judgment to make wise decisions." },
+  { word: "Discipline", hint: "Choosing what matters over what is easiest." },
 ];
 
 function scramble(word: string): string {

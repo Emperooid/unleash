@@ -26,12 +26,12 @@ export function Hero() {
         <Reveal className="relative overflow-hidden rounded-[1.75rem] sm:rounded-[2.5rem]">
           <div className="relative aspect-[4/5] w-full sm:aspect-[16/10] lg:aspect-[21/9]">
             <Image
-              src="/book/front.jpg"
-              alt="Young people from the UNLEASH movement"
+              src="/hero/unleash-canva-hero.jpg"
+              alt="Topsy Kola-Oyeneyin sharing UNLEASH with young readers"
               fill
               priority
               sizes="100vw"
-              className="object-cover"
+              className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/30 to-ink/65" />
 

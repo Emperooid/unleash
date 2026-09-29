@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
@@ -9,7 +10,6 @@ import { NAV_LINKS, VALUE_CARDS } from "@/lib/content";
 import { Marquee } from "@/components/ui/Marquee";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { Book3D } from "@/components/ui/Book3D";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -43,9 +43,18 @@ export function Header() {
       >
         <Container className="flex h-[72px] items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-            <Book3D size="xs" speed={9} />
+            <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-ink">
+              <Image
+                src="/brand/unleash-head.png"
+                alt=""
+                width={40}
+                height={40}
+                className="h-full w-full object-contain"
+                priority
+              />
+            </span>
             <span className="font-display text-lg font-bold tracking-tight">
-              UNLEASH<span className="text-orange-500"> HUB</span>
+              The UNLEASH <span className="text-orange-500">Hub</span>
             </span>
           </Link>
 
