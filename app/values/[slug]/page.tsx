@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Check, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { VALUE_CARDS } from "@/lib/content";
+import { VALUE_CARDS, VALUE_DETAILS } from "@/lib/content";
 import { CARD_COLOR_CLASSES } from "@/lib/cardColors";
 
 export function generateStaticParams() {
@@ -36,6 +35,7 @@ export default async function ValuePage({
   if (index === -1) notFound();
 
   const card = VALUE_CARDS[index];
+  const details = VALUE_DETAILS[card.slug];
   const next = VALUE_CARDS[(index + 1) % VALUE_CARDS.length];
   const colors = CARD_COLOR_CLASSES[card.color];
 
@@ -75,20 +75,41 @@ export default async function ValuePage({
           ))}
         </Reveal>
 
-        <Reveal
-          delay={0.22}
-          className="relative mt-10 aspect-[4/3] w-full overflow-hidden rounded-[1.75rem] sm:mt-14"
-        >
-          <Image
-            src={card.image}
-            alt={card.word}
-            fill
-            sizes="(min-width: 768px) 720px, 100vw"
-            className="object-cover"
-          />
-        </Reveal>
+        {details && (
+          <>
+            <Reveal delay={0.2} className="mt-12 sm:mt-14">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+                In practice
+              </h2>
+              <ul className="mt-5 space-y-3">
+                {details.inPractice.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20">
+                      <Check size={12} className="text-white" />
+                    </span>
+                    <span className="text-base leading-relaxed text-white/90 sm:text-lg">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
 
-        <Reveal delay={0.28} className="mt-12 border-t border-white/15 pt-8 sm:mt-16">
+            <Reveal delay={0.26} className="mt-12 sm:mt-14">
+              <div className="rounded-3xl bg-white/10 p-7 ring-1 ring-white/15 sm:p-8">
+                <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+                  <Sparkles size={14} className="text-white/70" />
+                  Reflect
+                </p>
+                <p className="mt-3 font-display text-xl font-bold leading-snug text-cream sm:text-2xl">
+                  {details.reflection}
+                </p>
+              </div>
+            </Reveal>
+          </>
+        )}
+
+        <Reveal delay={0.32} className="mt-12 border-t border-white/15 pt-8 sm:mt-16">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
             Next principle
           </p>

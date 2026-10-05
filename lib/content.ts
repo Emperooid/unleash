@@ -236,6 +236,110 @@ export const VALUE_CARDS = [
   },
 ];
 
+// Richer definition-page content for each principle, keyed by slug — practical
+// ways to live each principle out plus a short reflection prompt.
+export const VALUE_DETAILS: Record<
+  string,
+  { inPractice: string[]; reflection: string }
+> = {
+  justice: {
+    inPractice: [
+      "Treat people the same way you would want to be treated, even when no one is watching.",
+      "Stand up for someone being treated unfairly, especially when it costs you something.",
+      "Hold yourself to the same standard you expect from others.",
+    ],
+    reflection: "Where in my life am I tempted to bend the rules to my advantage?",
+  },
+  knowledge: {
+    inPractice: [
+      "Read and study a little every day, not just when you have to.",
+      "Ask questions and admit what you do not yet know.",
+      "Apply what you learn — test it, teach it, and refine it.",
+    ],
+    reflection: "What is one thing I can learn this week that will make me more useful?",
+  },
+  planning: {
+    inPractice: [
+      "Write down what needs to happen, when, and what it will require.",
+      "Break big goals into small, clear next steps.",
+      "Review your plans regularly and adjust when things change.",
+    ],
+    reflection: "If I don't plan this, what is the most likely thing to go wrong?",
+  },
+  diligence: {
+    inPractice: [
+      "Show up and do the work even when you don't feel like it.",
+      "Finish what you start before chasing the next thing.",
+      "Focus on consistency over intensity — small steps, every day.",
+    ],
+    reflection: "What is one task I keep postponing that I can move forward today?",
+  },
+  compassion: {
+    inPractice: [
+      "Listen to understand before you respond.",
+      "Offer help without waiting to be asked.",
+      "Assume the best about people until you have reason not to.",
+    ],
+    reflection: "Who around me is struggling, and what small thing can I do to help?",
+  },
+  honor: {
+    inPractice: [
+      "Keep your word, even when it's inconvenient.",
+      "Do the right thing when no one is watching.",
+      "Treat every person with respect, regardless of their status.",
+    ],
+    reflection: "Is there a promise I have made that I still need to keep?",
+  },
+  teachability: {
+    inPractice: [
+      "Welcome correction and feedback instead of defending yourself.",
+      "Learn from people who know more than you.",
+      "Stay curious — be willing to change your mind with new evidence.",
+    ],
+    reflection: "What is the last piece of feedback I received, and did I act on it?",
+  },
+  trustworthiness: {
+    inPractice: [
+      "Keep small commitments — they build big trust.",
+      "Be honest even when the truth is uncomfortable.",
+      "Be consistent, so people know what to expect from you.",
+    ],
+    reflection: "Can the people around me rely on my word today?",
+  },
+  "quality-relationships": {
+    inPractice: [
+      "Be fully present with the people you're with.",
+      "Invest in a few deep relationships over many shallow ones.",
+      "Encourage the growth of the people around you.",
+    ],
+    reflection: "Which relationship deserves more of my attention this week?",
+  },
+  prudence: {
+    inPractice: [
+      "Pause before deciding and consider the consequences.",
+      "Seek wise counsel before making big choices.",
+      "Balance ambition with foresight — plan for risks, not just rewards.",
+    ],
+    reflection: "What decision am I facing that deserves more careful thought?",
+  },
+  "intentionality-of-speech": {
+    inPractice: [
+      "Think before you speak — ask if it's true, kind, and necessary.",
+      "Say what you mean, and mean what you say.",
+      "Use your words to build people up, not tear them down.",
+    ],
+    reflection: "Is there something I should say — or stop saying — to speak more carefully?",
+  },
+  "discipline-self-control": {
+    inPractice: [
+      "Do the hard thing first, before the easy thing.",
+      "Set boundaries for your time, habits, and impulses.",
+      "Delay short-term pleasure for long-term purpose.",
+    ],
+    reflection: "Where am I letting what's easy overrule what matters?",
+  },
+};
+
 // Footer link columns — sourced from the Canva reference site.
 export const FOOTER_COLUMNS = [
   {
